@@ -61,9 +61,3 @@ lambda-replica --source-cloud AWS \
 
 ***
 For any question, please contact `shujunyi@gmail.com`.
-brew install azure-cli
-
-az login --service-principal \
-  -u <appId_from_above> \
-  -p <password_from_above> \
-  --tenant <tenant_from_above>
