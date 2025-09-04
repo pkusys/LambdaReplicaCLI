@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LambdaReplicaCLI"
+version = "0.1.0"
+authors = [
+    { name="Junyi Shu", email="shujunyi@pku.edu.cn" },
+    { name="Xiaolong Huang", email="huangxiaolong@pku.edu.cn" }
+]
+description = "A easy-to-use CLI of LambdaReplica."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT",
+    "Operating System :: OS Independent",
+]
+
+ dependencies = [
+     "azure-functions",
+     "azure-storage-blob",
+     "azure-identity",
+     "azure-storage-queue",
+     "azure-cosmos",
+     "azure-mgmt-cosmosdb",
+     "azure-mgmt-web",
+     "azure-mgmt-resource",
+     "azure-mgmt-storage",
+     "google-cloud-storage",
+     "google-cloud-pubsub",
+     "google-cloud-firestore",
+     "google-cloud-functions",
+     "google-cloud-run",
+     "boto3",
+     "asyncio",
+     "aiohttp",
+     "requests",
+ ]
+
+[project.urls]
+Homepage = "https://github.com/pkusys/LambdaReplicaCLI"
+Issues = "https://github.com/pkusys/LambdaReplicaCLI/issues"
+
+[project.scripts]
+lambda-replica = "lambdareplica.cli.replication_cli:main"
+lambda-replica-config = "lambdareplica.cli.config_cli:main"
+object-storage-cli = "lambdareplica.cli.object_storage_cli:main"
