@@ -56,7 +56,7 @@ lambda-replica --source-cloud AWS \
 --source-bucket lambda.replica.test.us-east-1 \
 --object-key 1M.dat \
 --destination-cloud Azure \
- --destination-bucket lreastus/lambda-replica
+--destination-bucket lreastus/lambda-replica
 ```
 
 ***
