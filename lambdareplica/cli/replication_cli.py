@@ -5,6 +5,7 @@ import json
 import math
 import os
 import sys
+from pathlib import Path
 from typing import Tuple
 
 from lambdareplica.integration import AWSClient, AzureClient, GcpClient
@@ -91,6 +92,9 @@ def replicate(
     if not os.path.exists(CONFIG_DIR):
         print(f"lambda-replica-config must be run before using lambda-replica")
         sys.exit(1)
+
+    status_path = Path(REGION_STATUS_FILE)
+    status_path.touch(exist_ok=True)
 
     with open(REGION_STATUS_FILE, "r+") as f:
         content = f.read().strip()
